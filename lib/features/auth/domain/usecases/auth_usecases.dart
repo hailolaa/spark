@@ -26,10 +26,10 @@ class LoginParams {
 
 // Register Use Case
 
-class RegisterUseCse implements UseCase<UserEntity, RegisterParams> {
+class RegisterUseCase implements UseCase<UserEntity, RegisterParams> {
   final AuthRepository repository;
 
-  RegisterUseCse(this.repository);
+  RegisterUseCase(this.repository);
 
   @override
   Future<Either<Failure, UserEntity>> call(RegisterParams params) async {

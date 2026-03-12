@@ -1,6 +1,4 @@
-import 'dart:convert';
 import 'package:shared_preferences/shared_preferences.dart';
-import '../../../../core/error/failures.dart';
 import '../../../../core/constants/app_constants.dart';
 import '../models/user_model.dart';
 
@@ -47,9 +45,13 @@ class AuthLocalDataSourceImpl implements AuthLocalDataSource {
       await _saveUserSession(user);
       return user;
     }
-
     throw const AuthException('Invalid email or password');
   }
+
+  
+
+  
+
 
   @override
   Future<UserModel> register(String name, String email, String password) async {
