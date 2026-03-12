@@ -2,6 +2,9 @@ import 'package:go_router/go_router.dart';
 import 'package:flutter/material.dart';
 import '../constants/app_constants.dart';
 import '../../features/splash/presentation/pages/splash_page.dart';
+import '../../features/auth/presentation/pages/login_page.dart';
+import '../../features/auth/presentation/pages/register_page.dart';
+
 
 class AppRouter {
   AppRouter._();
@@ -14,7 +17,7 @@ class AppRouter {
       ),
 
       //AUTH Routes
-      /*  GoRoute(
+      GoRoute(
         path: AppConstants.routeLogin,
         builder: (context, state) => const LoginPage(),
       ),
@@ -24,16 +27,18 @@ class AppRouter {
       ),
 
       //MAIN Routes
-      GoRoute(
+       GoRoute(
         path: AppConstants.routeHome,
-        builder: (context, state) => const HomePage(),
+        builder: (context, state) => const Scaffold(
+          body: Center(child: Text("Home Page Placeholder", style: TextStyle(color: Colors.white))),
+        ),
       ),
-
-      //ADMIN Routes
       GoRoute(
         path: AppConstants.routeAdminDashboard,
-        builder: (context, state) => const AdminDashboardPage(),
-      ),*/
+        builder: (context, state) => const Scaffold(
+          body: Center(child: Text("Admin Dashboard Placeholder", style: TextStyle(color: Colors.white))),
+        ),
+      ),
     ],
 
     ///Error Page
